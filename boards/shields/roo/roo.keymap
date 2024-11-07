@@ -1,0 +1,29 @@
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer { // Layer 0
+            // -------------------------------------
+            // |     q     |     w     |     f     |	p
+            // |     a     |     w     |     s     |	t
+            // |     z     |     x     |     c     |	d
+			// |		   |		   |     g     |    b
+            // -------------------------------------
+            // |     l     |     u     |     y     |	m
+            // |     n     |     e     |     i     |	o
+            // |     h     |     k     |     j     |	v
+			// |   	 0     |     1
+            bindings = <
+                &kp q    &kp w    &kp f	   &kp p
+                &kp a    &kp r    &kp s	   &kp t
+                &kp z    &kp x    &kp c    &kp d
+								  &kp g    &kp b
+
+                &kp l    &kp u    &kp y	   &kp m
+                &kp n    &kp e    &kp i	   &kp o
+                &kp h    &kp k    &kp j    &kp v
+				&kp 0    &kp 1
+            >;
+        };
+    };
+ };
