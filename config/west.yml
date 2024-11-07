@@ -13,6 +13,6 @@ manifest:
       import: app/west.yml
     - name: roo-shield-module
       remote: roo
-      revision: first
+      revision: main
   self:
     path: config
