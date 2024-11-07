@@ -5,13 +5,13 @@ manifest:
     # Additional modules containing boards/shields/custom code can be listed here as well
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
     - name: roo
-      url-base: https://github.com/turkishfilms/roo-shield-module
+      url-base: https://github.com/turkishfilms
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    - name: roo
+    - name: roo-shield-module
       remote: roo
       revision: first
   self:
