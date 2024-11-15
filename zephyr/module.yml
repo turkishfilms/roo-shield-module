@@ -1,3 +1,4 @@
+name: roo
 build:
   settings:
     board_root: .
