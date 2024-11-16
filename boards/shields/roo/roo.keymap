@@ -1,5 +1,112 @@
 #include <dt-bindings/zmk/mouse.h>
 
+// TAPDANCE
+// COMBOS
+// MACROS
+// MOUSE
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <0 1>;
+            bindings = <&kp ESC>
+        },
+        combo_ESCAPE {
+            timeout-ms = <200>;
+            key-positions = <0 1>;
+            bindings = <&kp ESCAPE>;
+        },
+        combo_TO3 {
+            timeout_ms = <200>;
+            key-positions = <26 27>;
+            bindings = <&kp TO3>;
+        },
+        combo_TO0{ 
+            timeout-ms = <200>;
+            key-positions = <BTN1 TD5>;
+            bindings = <&kp TO0>;
+        },
+        combo_GUI { 
+            timeout-ms = <200>;
+            key-positions = <8 9>;
+            bindings = <&kp OSMMOD_LGUI>;
+        },
+        combo_DEL { 
+            timeout-ms = <200>;
+            key-positions = <3 12>;
+            bindings = <&kp DELETE >;
+        },
+        combo_ENTER {
+            timeout-ms = <200>;
+            key-positions = <24 25>;
+            bindings = <&kp ENTER>;
+        },
+        combo_TO3 {
+            timeout-ms = <200>;
+            key-positions =<12 OSL6>;
+            bindings = <&kp TO3>;
+        },
+        combo_tab {
+            timeout-ms = <200>;
+            key-positions =<4 5>;
+            bindings = <&kp TAB>;
+        },
+        combo_G {
+            timeout-ms = <200>;
+            key-positions =<3 7>;
+            bindings = <&kp G>;
+        },
+        combo_B {
+            timeout-ms = <200>;
+            key-positions =<7 11>;
+            bindings = <&kp B>;
+        },
+        combo_V {
+            timeout-ms = <200>;
+            key-positions =<2 6>;
+            bindings = <&kp V>;
+        },
+        combo_K {
+            timeout-ms = <200>;
+            key-positions =<14 18>;
+            bindings = <&kp K>;
+        },
+        combo_J {
+            timeout-ms = <200>;
+            key-positions =<18 22>;
+            bindings = <&kp J>;
+        },
+        combo_M {
+            timeout-ms = <200>;
+            key-positions = <15 19>;
+            bindings = <&kp M>;
+        },
+            M
+        combo_M0 {
+            timeout-ms = <200>;
+            key-positions = <20 24>;
+            bindings = <&kp M0>;
+        },
+        combo_M1 {
+            timeout-ms = <200>;
+            key-positions = <21 25>;
+            bindings = <&kp M1>;
+        },
+        combo_TD4 {
+            timeout-ms = <200>;
+            key-positions = <17 22>;
+            bindings = <&kp TD4>;
+        },
+        combo_TD14 {
+            timeout-ms = <200>;
+            key-positions = <16 20>;
+            bindings = <&kp TD14>;
+        },
+    };
+};
+
 / {
     keymap {
         compatible = "zmk,keymap";
@@ -27,12 +134,12 @@
             // | F5| F6| F7| F8          F1| F2| F3| F4
             // | 5 | 6 | 7 | 8           1 | 2 | 3 | 4
             // |hm |end| ` | {}          [] | k | j | v
-	    //             | g | b   0 | 1
+	    //             | g | b  0 | 1
 
             bindings = <
-                &kp F7 &kp F8 &kp F9 &kp F10
+                &kp F7 &kp F8 &kp F &kp F10
                 &kp N6 &kp N7 TD(1) &kp N0
-                &kp HOME &kp END &kp GRAVE TD(12)
+                &kp HOME &kp END &kp, GRAVE TD(12)
                 &trans &trans
                 TD(7) TD(8) TD(9) TD(10)
                 &kp N1 TD(0) &kp N4 &kp N5 
@@ -64,7 +171,7 @@
                 &kp C_AC_BACK TD(3) &kp C_AC_BACK TD(2) &trans 
                 M0 &kp MS_U M1 &kp WH_U
                 &kp MS_L &kp MS_D &kp MS_R &kp WH_D
-                &kp BTN1 TD(5)
+                &mkp MB1 TD(5)
             >;
         }
     };
